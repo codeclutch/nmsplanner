@@ -1,0 +1,48 @@
+<div class="main">
+  <header>
+    <h1>No Man's Sky - Freighter Floor Planner</h1>
+    <div>
+      <button class="emptyButton" onclick="emptyCanvas()">Empty Plan</button>
+      <button class="defaultButton" onclick="defaultCanvas()">Default Plan</button>
+      <button class="clearButton" onclick="clearCanvas()">Clear Plan</button>
+    </div>
+  </header>
+  <div class="main_body">
+    <aside>
+      <label>Part Selector</label>
+      <div class="parts">
+        <img id="parts-source" crossorigin />
+        <div class="part-selection"></div>
+      </div>
+      <label>Layer</label>
+      <div>
+        <ul class="layers">
+          <li><button onclick="setLayer(2)" class="layer" tile-layer="2">Top</button></li>
+          <li><button onclick="setLayer(1)" class="layer" tile-layer="1">Middle</button></li>
+          <li><button onclick="setLayer(0)" class="layer" tile-layer="0">Bottom</button></li>
+        </ul>
+      </div>
+      <label>Import / Export</label>
+      <div>
+        <ul class="fileImpExp">
+          <li><button onclick="document.getElementById('importJSONFile').click();">Import JSON</button>
+            <input id="importJSONFile" type="file" accept=".json" style="display:none;"></li>
+          <li><button onclick="exportJSON()">Export JSON</button></li>
+          <li><button onclick="exportPNG()">Export Image</button></li>
+        </ul>
+      </div>
+    </aside>
+    <div class="main_right">
+      <label class="instructions">
+        <b>Click</b> to paint.
+        <b>Shift+Click</b> to remove.
+      </label>
+      <!-- The main canvas -->
+      <canvas width="672" height="704"></canvas>
+      <!-- UI for layers -->
+      <div class="footer">
+        (Note: Freighter has 15 floors) --- Made by: Devilin Pixy© --- (updated for Endurance 3.94)
+      </div>
+    </div>
+  </div>
+</div>
