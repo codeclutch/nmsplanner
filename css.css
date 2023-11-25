@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+	padding: 1em;
+	background: linear-gradient(180deg, #666 0%, #222 100%);
+	display: flex;
+	justify-content: space-around;
+	color: #222;
+}
+
+.main {
+	background: #ccc;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+	padding-bottom: 16px;
+}
+.main header {
+  display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #000;
+	margin-bottom: 1em;
+	padding: 16px;
+}
+.main header h1 {
+	margin: 0;
+}
+.main aside {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+.main_body {
+	display: flex;
+}
+.main_right {
+	padding-right: 16px;
+}
+
+.instructions {
+	font-size: 1em;
+	color: #222;
+	text-align: center;
+	margin: 0;
+}
+
+label {
+  background-color: #00ffff16;
+  color: #222;
+  text-align: center;
+	font-weight: bold;
+	display: block;
+}
+
+canvas {
+  background-color: #888;
+}
+
+.parts {
+	position: relative;
+}
+.part-selection {
+	position: absolute;
+	outline: 3px solid cyan;
+	left: 0;
+	top: 0;
+	width: 32px;
+	height: 32px;
+}
+
+.layers {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.layers button {
+	appearance: none;
+	font-family: inherit;
+  font-size: 1em;
+  color: #eee;
+	outline: #000;
+	background: #666;
+  border-radius: 8px;
+	padding: 4px;
+  margin: 0 0 4px 0;
+	display: block;
+	width: 100%;
+	text-align: center;
+	cursor: pointer;
+}
+.layers button.active {
+	font-weight: bold;
+	color: #00ffff;
+}
+.layers button:hover {
+  background-color: #aaa;
+}
+
+.clearButton, .defaultButton, .emptyButton {
+	appearance: none;
+	text-decoration: underline;
+	background: transparent;
+  font-size: 1em;
+  font-weight: bold;
+	color: #b00;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+}
+
+.clearButton:hover, .defaultButton:hover, .emptyButton:hover {
+  color: #ff0000;
+}
+
+.fileImpExp {
+  list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.fileImpExp button, .fileImpExp input {
+	appearance: none;
+	font-family: inherit;
+  font-size: 1em;
+	outline: #000;
+	background-color: #eee;
+  border-radius: 8px;
+	padding: 4px;
+  margin: 4px 0;
+	display: block;
+	width: 100%;
+	text-align: center;
+	cursor: pointer;
+}
+
+.fileImpExp button:hover {
+  background-color: #aaa;
+}
+
+.footer {
+  text-align: center;
+  margin: 4px;
+}
